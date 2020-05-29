@@ -1,14 +1,18 @@
 class Queries {
   static List questionAnswers = [
     {
-      "question": "What is a corona virus?",
+      "question": "What is the novel corona virus?",
       "answer":
-      "Corona viruses are a large family of viruses which may cause illness in animals or humans.  In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19."
+      "Corona viruses are a large family of viruses that are known to cause illness in humans and animals. In humans, this large family of viruses are known to cause illness ranging from the common cold to Severe Acute Respiratory Syndrome (SARS)."
     },
     {
       "question": "What is COVID-19?",
       "answer":
       "COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019."
+    },
+    {
+      "question":"Is the novel corona virus like SARS?",
+      "answer":"SARS is a corona virus that was identified in 2003 and belongs to the same large family of viruses as the novel coronavirus. Therefore, SARS and the novel corona virus are distantly related. Both viruses are capable of causing severe disease. However, the novel corona virus does not appear to transmit easily between people while the SARS virus was much more transmissible."
     },
     {
       "question": "How does COVID-19 spread?",
@@ -52,6 +56,10 @@ class Queries {
       "Are antibiotics effective in preventing or treating the COVID-19?",
       "answer":
       "No. Antibiotics do not work against viruses, they only work on bacterial infections. COVID-19 is caused by a virus, so antibiotics do not work. Antibiotics should not be used as a means of prevention or treatment of COVID-19. They should only be used as directed by a physician to treat a bacterial infection. "
+    },
+    {
+      "question":"Is there a vaccine for the novel coronavirus?",
+      "answer":"There is no vaccine currently available."
     }
   ];
 }

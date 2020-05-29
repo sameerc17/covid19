@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+//      theme: ThemeData.dark(),
       home: MyStatefulWidget(),
     );
   }
@@ -47,6 +48,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         backgroundColor: Color(0xff202c3b),
         title: Text(
           'Covid-19 Tracker',
+//          style: TextStyle(fontSize: 25.0),
         ),
       ),
       body: Center(

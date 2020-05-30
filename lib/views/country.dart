@@ -63,80 +63,85 @@ class _CountryState extends State<Country> {
                     ),
                   ),
                 )
-              : ListView.builder(
-                  itemBuilder: (context, index) {
-                    return Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              Color(0xffC9D6FF),
-                              Color(0xFFE2E2E2)
-                            ],
-                          ),
-                        ),
-                        child: Row(
-                          children: <Widget>[
-                            Container(
-                              width: 120,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  SizedBox(height: 5.0,),
-                                  Text(
-                                    jsonData[index]['country'],
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18.0),
-                                  ),
-                                  Image.network(
-                                    jsonData[index]['countryInfo']['flag'],
-                                    height: 80,
-                                    width: 100,
-                                  ),
-                                ],
-                              ),
+              : Container(
+                  height: MediaQuery.of(context).size.height,
+                  child: ListView.builder(
+                    itemBuilder: (context, index) {
+                      return Card(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [Color(0xffC9D6FF), Color(0xFFE2E2E2)],
                             ),
-                            Expanded(
-                              child: Container(
+                          ),
+                          child: Row(
+                            children: <Widget>[
+                              Container(
+                                width: 120,
                                 child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
-                                    Text(
-                                      'Confirmed cases: ' +
-                                          jsonData[index]['cases'].toString(),
-                                      style: TextStyle(fontSize: 20.0),
+                                    SizedBox(
+                                      height: 5.0,
                                     ),
                                     Text(
-                                      'Active cases: ' +
-                                          jsonData[index]['active'].toString(),
-                                      style: TextStyle(fontSize: 20.0),
+                                      jsonData[index]['country'],
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18.0),
                                     ),
-                                    Text(
-                                      'Recovered cases: ' +
-                                          jsonData[index]['recovered']
-                                              .toString(),
-                                      style: TextStyle(fontSize: 20.0),
-                                    ),
-                                    Text(
-                                      'Death cases: ' +
-                                          jsonData[index]['deaths'].toString(),
-                                      style: TextStyle(fontSize: 20.0),
+                                    Image.network(
+                                      jsonData[index]['countryInfo']['flag'],
+                                      height: 80,
+                                      width: 100,
                                     ),
                                   ],
                                 ),
                               ),
-                            ),
-                          ],
+                              Expanded(
+                                child: Container(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: <Widget>[
+                                      Text(
+                                        'Confirmed cases: ' +
+                                            jsonData[index]['cases'].toString(),
+                                        style: TextStyle(fontSize: 20.0),
+                                      ),
+                                      Text(
+                                        'Active cases: ' +
+                                            jsonData[index]['active']
+                                                .toString(),
+                                        style: TextStyle(fontSize: 20.0),
+                                      ),
+                                      Text(
+                                        'Recovered cases: ' +
+                                            jsonData[index]['recovered']
+                                                .toString(),
+                                        style: TextStyle(fontSize: 20.0),
+                                      ),
+                                      Text(
+                                        'Death cases: ' +
+                                            jsonData[index]['deaths']
+                                                .toString(),
+                                        style: TextStyle(fontSize: 20.0),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    );
-                  },
+                      );
+                    },
+                  ),
                 ),
         ),
       ),

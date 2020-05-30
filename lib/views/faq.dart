@@ -1,4 +1,4 @@
-import 'package:covid19/queries.dart';
+import 'package:covid19/lister/queries.dart';
 import 'package:flutter/material.dart';
 
 class FAQ extends StatelessWidget {

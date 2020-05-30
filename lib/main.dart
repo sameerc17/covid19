@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'views/about.dart';
 import 'views/faq.dart';
 import 'views/home.dart';
 
@@ -27,10 +28,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Yet to do',
-      style: optionStyle,
-    ),
+    About(),
     Home(),
     FAQ(),
   ];
@@ -51,9 +49,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 //          style: TextStyle(fontSize: 25.0),
         ),
       ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
+      body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

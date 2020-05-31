@@ -17,7 +17,7 @@ var jData;
 
 class _HomeState extends State<Home> {
   getMost() async {
-    var url = 'https://corona.lmao.ninja/v2/countries?sort=cases';
+    var url = 'https://corona.lmao.ninja/v2/countries?sort=deaths';
     var response = await http.get(url);
     jData = jsonDecode(response.body);
     setState(() {

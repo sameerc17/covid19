@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:covid19/models/countrymodel.dart';
+import 'package:covid19/models/search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:http/http.dart' as http;
@@ -33,10 +34,17 @@ class _CountryState extends State<Country> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-//      theme: ThemeData.dark(),
 
       home: Scaffold(
         appBar: AppBar(
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: (){
+                showSearch(context: context, delegate: Search(jsonData));
+              },
+            )
+          ],
           backgroundColor: Color(0xff202c3b),
           title: Text(
             'Covid-19 Tracker',
